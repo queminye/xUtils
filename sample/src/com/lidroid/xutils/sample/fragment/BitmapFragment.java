@@ -20,6 +20,7 @@ import com.lidroid.xutils.bitmap.BitmapCommonUtils;
 import com.lidroid.xutils.bitmap.BitmapDisplayConfig;
 import com.lidroid.xutils.bitmap.callback.BitmapLoadFrom;
 import com.lidroid.xutils.bitmap.callback.DefaultBitmapLoadCallBack;
+import com.lidroid.xutils.cache.FileNameGenerator;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
@@ -65,8 +66,8 @@ public class BitmapFragment extends Fragment {
         bitmapUtils.configDefaultLoadFailedImage(R.drawable.bitmap);
         bitmapUtils.configDefaultBitmapConfig(Bitmap.Config.RGB_565);
 
-        //bitmapUtils.configMemoryCacheEnabled(false);
-        //bitmapUtils.configDiskCacheEnabled(false);
+        bitmapUtils.configMemoryCacheEnabled(true);
+        bitmapUtils.configDiskCacheEnabled(true);
 
         //bitmapUtils.configDefaultAutoRotation(true);
 
@@ -242,5 +243,4 @@ public class BitmapFragment extends Fragment {
         }
         return pics;
     }
-
 }

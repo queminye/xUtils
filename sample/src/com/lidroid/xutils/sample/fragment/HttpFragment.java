@@ -80,7 +80,7 @@ public class HttpFragment extends Fragment {
     @ResInject(id = R.string.download_label, type = ResType.String)
     private String label;
 
-    @OnClick(R.id.download_btn)
+   // @OnClick(R.id.download_btn)
     public void download(View view) {
         String target = "/sdcard/xUtils/" + System.currentTimeMillis() + "lzfile.apk";
         try {
@@ -200,7 +200,7 @@ public class HttpFragment extends Fragment {
                 });
     }
 
-    //@OnClick(R.id.download_btn)
+    @OnClick(R.id.download_btn)
     public void testPost(View view) {
         RequestParams params = new RequestParams();
         params.addQueryStringParameter("method", "mkdir");
